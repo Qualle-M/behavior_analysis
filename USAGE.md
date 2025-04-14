@@ -13,7 +13,7 @@ Column-wise extraction with select function,\
 Change column name for after processing with rename function,\
 Add Arena number column with mutate function.\
 We need to write this for each Arena recorded.\ 
-3.Apply function\
+3. Apply function\
 ``Arena1 <- analyze.by.confidence(Arena1_data)``\
 We can acculate confidence score of coordinate change by this script.\
 Default settings are as follows.\
