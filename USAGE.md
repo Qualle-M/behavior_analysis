@@ -16,9 +16,9 @@ We need to write this for each Arena recorded.\
 3. Apply function\
 ``Arena1 <- analyze.by.confidence(Arena1_data)``\
 We can acculate confidence score of coordinate change by this script.\
-Default settings are as follows.
-- Window.Size = 30 (Use only 30 frames before and after for calculations),
-- Weights = c(Angle = 0.5, Distance = 0, Trend = 0.5, Frequency = 0) (Use the average of Angle and Trend confidence score)\
-- Output = "min" (Outputs only the minimum necessary results)\
+Default settings are as follows.\
+-Window.Size = 30 (Use only 30 frames before and after for calculations),\
+-Weights = c(Angle = 0.5, Distance = 0, Trend = 0.5, Frequency = 0) (Use the average of Angle and Trend confidence score)\
+-Output = "min" (Outputs only the minimum necessary results)\
 ``Arena1 <- classified.distance(Arena1, threshold = 65)``\
 Classify less than 65% as an error and more than 65% as a move.
