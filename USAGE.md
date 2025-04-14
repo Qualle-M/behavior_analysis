@@ -1,5 +1,7 @@
 ## Explanation of usage
 
+>[!NOTE]
+>We need to run all scripts of behavior_functions.R before this processing.
 1. Import Excel data\
    ``raw_data <- read.xlsx("E:/研究室/behavior/20241023_7in_caffeine_4.5.6.xlsx")``
 2. Divide data\
