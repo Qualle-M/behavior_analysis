@@ -40,4 +40,24 @@ Script to create a line graph representing cumulative distance.\
 \
 ``line_plot``\
 Show the graph.
-   - Pie chart
+   - Pie chart\
+   ``status_summary <- Arena1 %>%
+  filter(Status != "No Move") %>%
+  count(Status) %>%
+  mutate(percentage = n / sum(n)*100)``\
+Calvulate the percentage of each status for pie chart.\
+We can also calculate the percentage of statuses that include No Move if you erase `filter(Status != "No Move") %>%`.\
+\
+``pie_chart <- ggplot(status_summary, aes(x = "", y = percentage, fill = Status)) +
+  geom_bar(stat = "identity", width = 1) +
+  coord_polar("y", start = 0) +
+  theme_void() +
+  geom_text(aes(label = paste0(round(percentage, 1), "%")), 
+            position = position_stack(vjust = 0.5)) +
+  labs(title = "Distribution of Coordinate Change Status",
+       fill = "Status") +
+  scale_fill_brewer(palette = "Set2")``\
+Create pie chart that shows the percentage of each status　during observation time.\
+\
+``pie_chart``\
+Show  the pie chart.
