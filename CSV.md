@@ -15,19 +15,22 @@ Extract only essencial information for analysis.
   do(analyze.by.confidence(.)) %>%
   do(classified.distance(., threshold = 65))%>%
   arrange(as.numeric(parse_number(Trial.Arena)))``\
-We can apply functions on default setting by this script.\
+We can apply functions on default setting by this script.
 7. Output
    - Line plot\
      ``arena_order <- unique(trimmed_result$Trial.Arena)
 trimmed_result$Trial.Arena <- factor(trimmed_result$Trial.Arena, levels = arena_order)``\
+Sort by Arena number from smallest to largest.\
 ``line_plot <- ggplot(trimmed_result, aes(x = Sample.Time, y = Cumsum.Distance, colour = Trial.Arena)) +
   geom_line() +
   labs(title = "Travel Distance", x = "Sample.Time", y = "Cumulative Distance") +
   theme_minimal()``\
+Create line plot with different colors for each Arena.\
 ``line_plot_WT``\
-
+Show line plot.
    - Final distance\
 ``final_distance <- trimmed_result %>%
   group_by(Trial.Arena) %>%
   summarise(Final.Distance = max(Cumsum.Distance, na.rm = T))%>%
   arrange(as.numeric(parse_number(Trial.Arena)))``\
+Extract final distance traveled.
