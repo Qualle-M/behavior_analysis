@@ -1,4 +1,4 @@
-## Explanation of usage
+## Explanation of behavior_usage.R
 
 >[!NOTE]
 >We need to run all scripts of behavior_functions.R before this processing.
