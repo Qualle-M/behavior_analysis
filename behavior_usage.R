@@ -1,5 +1,5 @@
 # Import data
-raw_data <- read.xlsx("E:/研究室/behavior/20241023_7in_caffeine_4.5.6.xlsx")
+raw_data <- read.xlsx("your_filename.xlsx")
 
 # Divide raw data and rename Arena number
 Arena1_data <- raw_data %>%
