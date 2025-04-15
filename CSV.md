@@ -9,7 +9,13 @@
   select(Trial.Arena, X.Coordinate, Y.Coordinate, Segment.Length, Sample.Time..Seconds.) %>%
   rename(Sample.Time = Sample.Time..Seconds.)``\
 Extract only essencial information for analysis.
-5. Apply functions
-6. Output
-   - Line plot
-   - Final distance
+5. Apply functions\
+   ``trimmed_result <- trimmed_data %>%
+  group_by(Trial.Arena) %>%
+  do(analyze.by.confidence(.)) %>%
+  do(classified.distance(., threshold = 65))%>%
+  arrange(as.numeric(parse_number(Trial.Arena)))``\
+We can apply functions on default setting by this script.\
+7. Output
+   - Line plot\
+   - Final distance\
