@@ -18,4 +18,16 @@ Extract only essencial information for analysis.
 We can apply functions on default setting by this script.\
 7. Output
    - Line plot\
+     ``arena_order <- unique(trimmed_result$Trial.Arena)
+trimmed_result$Trial.Arena <- factor(trimmed_result$Trial.Arena, levels = arena_order)``\
+``line_plot <- ggplot(trimmed_result, aes(x = Sample.Time, y = Cumsum.Distance, colour = Trial.Arena)) +
+  geom_line() +
+  labs(title = "Travel Distance", x = "Sample.Time", y = "Cumulative Distance") +
+  theme_minimal()``\
+``line_plot_WT``\
+
    - Final distance\
+``final_distance <- trimmed_result %>%
+  group_by(Trial.Arena) %>%
+  summarise(Final.Distance = max(Cumsum.Distance, na.rm = T))%>%
+  arrange(as.numeric(parse_number(Trial.Arena)))``\
