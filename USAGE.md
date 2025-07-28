@@ -25,7 +25,7 @@ Default settings are as follows but we can change each values easily.\
 \
 ``Arena1 <- classified.distance(Arena1, threshold = 65)``\
 Classify less than 65% as an error and more than 65% as a move.\
-The threshold can change by changing thte value after threshold = .
+The threshold can change by changing the value after `threshold = `.
 6. Visualize data
    - Line plot\
 ``merged_data <- rbind.data.frame(Arena1, Arena2, Arena3)``\
