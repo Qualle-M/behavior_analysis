@@ -42,5 +42,5 @@ R 4.4.2 or later\
 - CSV.md\
   This file contains explanations of comand in behavior_csv.
 
-### Reference materials
+### Reference
 - [panlab page of Smart3.0](https://www.panlab.com/en/products/smart-video-tracking-software-panlab)
