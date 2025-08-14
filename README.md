@@ -28,19 +28,24 @@ Panlab’s SMART 3.0 is a video tracking software designed to automate behaviora
 
 ### Requirement
 R 4.4.2 or later\
-(tidyverse and openxlsx should be installed)
+(tidyverse, openxlsx and plotly should be installed)
 
 ### File List
 - behavior_functions.R\
-   It only contains functions.
+  It only contains functions.
 - behavior_usage.R\
-   It contains template to use functions.
+  It contains template to use functions.
 - beahvior_csv.R\
-  It contains templates to use functions in case you extract result file in csv format and process them
+  It contains templates to use functions in case you extract result file in csv format and process them.
+- behavior_trajectory.R\
+  It contains template to make 3D interactive plot of swimming trajectory.
 - USAGE.md\
   This file contains explanations of each comand in bahavior_usage.R.
 - CSV.md\
   This file contains explanations of comand in behavior_csv.
+- Frequency_3D.html\
+  Thins file is one example of behavior_trajectory.R.\
+  please download and open if you want to see the result of behavior_trajectory.R.
 
 ### Reference
 - [panlab page of Smart3.0](https://www.panlab.com/en/products/smart-video-tracking-software-panlab)
